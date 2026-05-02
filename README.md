@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# 🗳️ VoteGuide AI — Indian Election Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> An AI-powered interactive assistant that helps Indian citizens understand the election process through personalized guidance, simulations, and quizzes.
 
-## Available Scripts
+![VoteGuide AI](https://img.shields.io/badge/AI-Powered-blue) ![React](https://img.shields.io/badge/React-18-61DAFB) ![Groq](https://img.shields.io/badge/Groq-LLaMA3-orange) ![License](https://img.shields.io/badge/License-MIT-green)
 
-In the project directory, you can run:
+## 🌟 Live Demo
+> Select your role → Ask anything → Get instant AI guidance!
 
-### `npm start`
+## 📌 Problem Statement
+Many Indian citizens, especially first-time voters, struggle to understand:
+- How elections actually work
+- What steps to follow on voting day
+- What mistakes to avoid
+- Their rights and duties as voters
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Existing solutions are **static, boring, and not user-friendly.**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 💡 Solution
+VoteGuide AI is a **fully interactive, AI-powered assistant** that:
+- 🎯 Personalizes guidance based on user role
+- 🗣️ Answers any election question in simple language
+- 🎮 Simulates real-life voting scenarios
+- 🧪 Tests knowledge through interactive quizzes
+- ⚠️ Warns about common mistakes with smart feedback
 
-### `npm test`
+## 🚀 Key Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 👤 Role-Based Personalization
+Users select their role on entry:
+- 🌟 First-time Voter
+- ✅ Returning Voter
+- 🎓 Student
+- 🔍 Curious Citizen
 
-### `npm run build`
+The AI adapts its tone, depth, and guidance accordingly.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🤖 AI-Powered Chat
+- Real-time conversational AI using LLaMA 3.3 70B via Groq
+- Understands context across the conversation
+- References Election Commission of India (ECI) guidelines
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🎮 Simulation Mode
+Real-life voting scenarios with decision-based learning:
+- User makes choices
+- AI gives instant feedback on wrong decisions
+- Shows real-world consequences
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🧪 Quiz Mode
+- Multiple choice questions about Indian elections
+- Score tracking
+- Detailed explanations for each answer
 
-### `npm run eject`
+### 📅 Election Timeline
+- Complete breakdown of Indian election phases
+- Before, during, and after voting guidance
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Technology | Purpose |
+|---|---|
+| React 18 | Frontend UI |
+| Groq API (LLaMA 3.3 70B) | AI Intelligence |
+| Express.js | Backend Proxy Server |
+| Node.js | Runtime Environment |
+| CSS3 | Styling & Animations |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ⚙️ How It Works
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. User selects their role (First-time voter, Student, etc.)
+2. AI personalizes the welcome and guidance
+3. User interacts via chat or quick action buttons
+4. Express proxy securely forwards requests to Groq AI
+5. AI responds with contextual, accurate election information
 
-## Learn More
+## 🏃 Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
+- Node.js v18+
+- Groq API Key (free at [console.groq.com](https://console.groq.com))
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
 
-### Code Splitting
+```bash
+# Clone the repository
+git clone https://github.com/prathampandit555/voteguide-ai.git
+cd voteguide-ai
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Install dependencies
+npm install
 
-### Analyzing the Bundle Size
+# Create .env file
+echo "GROQ_API_KEY=your_groq_api_key_here" > .env
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Start the proxy server (Terminal 1)
+node server.js
 
-### Making a Progressive Web App
+# Start the React app (Terminal 2)
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🔒 Security
+- API keys stored in `.env` file (never committed to GitHub)
+- Backend proxy prevents direct API exposure
+- Only election-related queries are processed
 
-### Advanced Configuration
+## 🌟 Why VoteGuide AI Stands Out
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Feature | Static Websites | VoteGuide AI |
+|---|---|---|
+| Personalization | ❌ | ✅ Role-based |
+| Interactivity | ❌ | ✅ Full chat |
+| Simulation | ❌ | ✅ Real scenarios |
+| Quiz Mode | ❌ | ✅ With scoring |
+| AI Feedback | ❌ | ✅ Smart feedback |
+| Mobile Friendly | ❌ | ✅ Responsive |
 
-### Deployment
+## 📚 References
+- [Election Commission of India](https://www.eci.gov.in)
+- [Voter Registration Portal](https://voters.eci.gov.in)
+- [Groq AI](https://groq.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 👨‍💻 Author
+**Pratham Pandit**
+- GitHub: [@prathampandit555](https://github.com/prathampandit555)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+*Built with ❤️ for PromptWars — Build with AI*
