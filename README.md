@@ -4,6 +4,17 @@
 
 ![VoteGuide AI](https://img.shields.io/badge/AI-Powered-blue) ![React](https://img.shields.io/badge/React-18-61DAFB) ![Groq](https://img.shields.io/badge/Groq-LLaMA3-orange) ![License](https://img.shields.io/badge/License-MIT-green)
 
+## 📸 Screenshots
+
+### Onboarding Screen
+![Onboarding](screenshot1.png)
+
+### Chat Interface
+![Chat](screenshot2.png)
+
+### AI Response
+![Response](screenshot3.png)
+
 ## 🌟 Live Demo
 > Select your role → Ask anything → Get instant AI guidance!
 
