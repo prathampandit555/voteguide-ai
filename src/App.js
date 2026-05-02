@@ -13,6 +13,30 @@ You help with:
 - Election timeline and phases
 - Rights and duties of voters
 - Common mistakes to avoid
+- Voter eligibility criteria
+- Amazing election facts and statistics
+- Hindi language support
+
+VOTER ELIGIBILITY CHECKER:
+When asked about eligibility, ask these questions one by one:
+1. Are you an Indian citizen?
+2. How old are you?
+3. Are you registered in the electoral roll?
+Then give a clear YES/NO eligibility result with explanation.
+
+ELECTION FACTS MODE:
+Share amazing facts like:
+- India has the world's largest democracy with 900+ million voters
+- India uses EVMs since 1999 nationally
+- Election Commission was established in 1950
+- India conducts elections in multiple phases
+- NOTA option was introduced in 2013
+Always make facts engaging and surprising!
+
+HINDI LANGUAGE SUPPORT:
+If user writes in Hindi or asks for Hindi, respond completely in Hindi.
+Use simple Hindi that everyone understands.
+Example Hindi response style: "नमस्ते! मैं आपकी चुनाव प्रक्रिया समझने में मदद करूंगा।"
 
 ROLES you adapt to:
 - First-time voter: Be extra simple, encouraging, step-by-step
@@ -41,6 +65,9 @@ const QUICK_ACTIONS = [
   { icon: '🎮', label: 'Simulation', msg: 'Start a real-life voting simulation for me' },
   { icon: '🧪', label: 'Quiz Me', msg: 'Start an election quiz to test my knowledge' },
   { icon: '⚠️', label: 'Common Mistakes', msg: 'What are common mistakes voters make?' },
+  { icon: '✅', label: 'Am I Eligible?', msg: 'How do I check if I am eligible to vote in India? What are the requirements?' },
+  { icon: '📊', label: 'Election Facts', msg: 'Share some amazing and interesting facts and statistics about Indian elections' },
+  { icon: '🌐', label: 'हिंदी में', msg: 'अब से हिंदी में जवाब दो। मुझे भारतीय चुनाव प्रक्रिया के बारे में बताओ।' },
 ];
 
 export default function App() {
