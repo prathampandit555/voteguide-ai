@@ -18,6 +18,9 @@
 ## 🌟 Live Demo
 👉 **[Click here to try VoteGuide AI](https://voteguide-ai.vercel.app/)**
 
+## 📝 Blog Post
+👉 **[Read how I built this on Dev.to](https://dev.to/prathampandit555/i-built-an-ai-powered-indian-election-guide-heres-how-3f2j)**
+
 > Select your role → Ask anything → Get instant AI guidance!
 
 ## 📌 Problem Statement
