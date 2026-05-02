@@ -85,21 +85,24 @@ What would you like to explore today? You can click a quick action below or ask 
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:3001/api/chat', {
+      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
           method: 'POST',
           headers: {
           'Content-Type': 'application/json',
-      },
+          'Authorization': 'Bearer ' + process.env.REACT_APP_GROQ_API_KEY,
+        },
         body: JSON.stringify({
-          model: 'claude-opus-4-5',
+          model: 'llama-3.3-70b-versatile',
           max_tokens: 1024,
-          system: SYSTEM_PROMPT + `\n\nUser role: ${role}`,
-          messages: newMessages.map(m => ({ role: m.role, content: m.content })),
+          messages: [
+            { role: 'system', content: SYSTEM_PROMPT + `\n\nUser role: ${role}` },
+            ...newMessages.map(m => ({ role: m.role, content: m.content }))
+          ],
         }),
       });
 
       const data = await response.json();
-      const reply = data.content?.[0]?.text || 'Sorry, I could not get a response. Please try again.';
+      const reply = data.choices?.[0]?.message?.content || 'Sorry, I could not get a response. Please try again.';
       setMessages([...newMessages, { role: 'assistant', content: reply }]);
     } catch (err) {
       setMessages([...newMessages, { role: 'assistant', content: '❌ Error connecting to AI. Please check your API key.' }]);
