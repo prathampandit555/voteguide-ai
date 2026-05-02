@@ -16,6 +16,8 @@
 ![Response](screenshot3.png)
 
 ## 🌟 Live Demo
+👉 **[Click here to try VoteGuide AI](https://voteguide-ai.vercel.app/)**
+
 > Select your role → Ask anything → Get instant AI guidance!
 
 ## 📌 Problem Statement
